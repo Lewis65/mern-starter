@@ -1,0 +1,34 @@
+{
+  "name": "mern-starter",
+  "version": "1.0.0",
+  "description": "A simple boilerplate from scratch for MERN projects.",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MERN",
+    "FCC",
+    "freecodecamp"
+  ],
+  "author": "Lewis Horwood",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
