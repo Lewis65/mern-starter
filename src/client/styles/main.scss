@@ -1,0 +1,50 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    * {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    width: 50%;
+}
+
+#header{
+    h1 {
+        color: #333;
+        margin: 20px;
+    }
+    nav {
+        background-color: #333;
+        padding: 20px 0;
+        width: 100%;
+        a {
+            color: #F0F;
+            margin: 10px;
+            padding: 5px;
+            text-decoration: none;
+        }
+    }
+}
+
+#main {
+    margin: 10px;
+}
+
+#wrapper {
+    max-width: 100%;
+    width: 100%;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}

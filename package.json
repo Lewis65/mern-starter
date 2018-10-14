@@ -4,8 +4,11 @@
   "description": "A simple boilerplate from scratch for MERN projects.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && babel-node src/server/server.js"
+    "start": "babel-node src/server/server.js",
+    "start:dev": "webpack-dev-server",
+    "prestart": "webpack --mode development"
   },
+  "proxy": "http://localhost:3000",
   "keywords": [
     "MERN",
     "FCC",
@@ -14,10 +17,7 @@
   "author": "Lewis Horwood",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -26,7 +26,15 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.0",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.3",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }
