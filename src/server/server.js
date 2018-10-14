@@ -1,13 +1,24 @@
 import express from "express";
 import path from "path";
 
-//Routes
+//Routers
 import api from "./routes/api";
 
 const app = express();
 const PORT = 3000;
 const publicPath = path.resolve(__dirname, "..", "..", "public");
 
+//HMR nonsense
+const webpack = require("webpack");
+const webpackConfig = require("../../webpack.config");
+const compiler = webpack(webpackConfig);
+
+app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+}))
+app.use(require("webpack-hot-middleware")(compiler))
+
+//Static files
 app.use(express.static(publicPath));
 
 //Routes
