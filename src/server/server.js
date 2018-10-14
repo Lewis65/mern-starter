@@ -9,12 +9,14 @@ const PORT = 3000;
 const publicPath = path.resolve(__dirname, "..", "..", "public");
 
 //HMR nonsense
-const webpack = require("webpack");
-const webpackConfig = require("../../webpack.config");
+import webpack from "webpack";
+import webpackConfig from "../../webpack.config";
 const compiler = webpack(webpackConfig);
 
 app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true, publicPath: webpackConfig.output.publicPath
+    noInfo: true,
+    publicPath: webpackConfig.output.publicPath,
+    historyApiFallback: true
 }))
 app.use(require("webpack-hot-middleware")(compiler))
 
