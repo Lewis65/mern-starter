@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { hot } from "react-hot-loader";
 
 import "../styles/main.scss";
 
@@ -29,4 +30,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default hot(module)(App);
